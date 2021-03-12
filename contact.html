@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+
+    <link rel="stylesheet" href="css/styles-contact.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <script src="js/contact.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Form</h1>
+      <p class="goals-line">
+        Make your first step to push all your boundaries and become your goals
+        in something real!
+      </p>
+      <p class="contact-line">
+        Please, explain us which is your case and we promise to contact you back
+        in less than 24 hours
+      </p>
+      <br />
+
+      <form action="https://formspree.io/f/mpzovlpa" method="POST">
+        <fieldset>
+          <legend>Required personal details <span>*</span></legend>
+          <label class="label-inline" for="fname">
+            First name<span>*</span>:
+          </label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            maxlength="70"
+            autofocus
+            required
+          />
+          <label class="label-inline" for="lname"> Last name: </label>
+          <input type="text" id="lname" name="lname" maxlength="70" />
+          <label class="label-inline" for="email"> Email<span>*</span>: </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            maxlength="100"
+            required
+          />
+          <label class="label-inline" for="mobile"> Mobile number: </label>
+          <input
+            type="tel"
+            id="mobile"
+            name="mobile"
+            pattern="[0-9]{11}"
+            placeholder="e.g., 07402688833"
+          />
+          <label class="label-inline" for="ybirth"> Year of birth: </label>
+          <input
+            type="number"
+            id="ybirth"
+            name="ybirth"
+            min="1900"
+            max="2099"
+            placeholder="e.g., 1984"
+          />
+          <label class="label-inline" for="gender"> Select your gender: </label
+          ><br />
+          <input type="radio" id="male" name="gender" value="male" />
+          <label class="label-inline" for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label class="label-inline" for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other" />
+          <label class="label-inline" for="other">Other</label> <br />
+          <label class="label-inline" for="health"
+            >Do you have any medical condition?</label
+          >
+          <textarea id="health" name="health" maxlength="500"></textarea>
+          <label class="label-inline" for="msg">What is your target?</label>
+          <textarea id="msg" name="msg" maxlength="300"> </textarea>
+
+          <label class="label-inline" for="meet">
+            How would you like to meet: </label
+          ><br />
+          <input type="radio" id="presencial" name="mode" value="presencial " />
+          <label class="label-inline" for="on_site">On-site</label>
+          <input type="radio" id="online" name="mode" value="online" />
+          <label class="label-inline" for="online">Online</label>
+        </fieldset>
+
+        <button type="submit">Send your details</button>
+        <button type="reset" class="button button-outline">Clear</button>
+      </form>
+
+      <p class="contact-line">You can also can contact us by:</p>
+
+      <button>Contact by WhatsApp</button>
+
+      <button>Contact by Email</button>
+    </div>
+  </body>
+</html>
